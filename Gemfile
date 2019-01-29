@@ -6,3 +6,5 @@ gem 'puffing-billy', git: 'https://github.com/oesmith/puffing-billy.git'
 gem 'rspec'
 
 gem 'webmock'
+
+gem 'rake'
