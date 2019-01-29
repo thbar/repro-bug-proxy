@@ -1,5 +1,6 @@
 require 'capybara/rspec'
 require 'capybara/apparition'
+require "capybara/cuprite"
 require 'billy/capybara/rspec'
 
 Capybara.register_driver :apparition_with_puffing_billy do |app|
@@ -22,6 +23,15 @@ Capybara.register_driver :poltergeist_with_puffing_billy do |app|
     ]
   }
   ::Capybara::Poltergeist::Driver.new(app, options)
+end
+
+Capybara.register_driver :cuprite_with_puffing_billy do |app|
+  options = {
+    window_size: [1280, 1024]
+  }
+  driver = Capybara::Cuprite::Driver.new(app, options)
+  driver.set_proxy(Billy.proxy.host, Billy.proxy.port)
+  driver
 end
 
 Capybara.server = :webrick

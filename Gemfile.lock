@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/machinio/cuprite.git
+  revision: 138a610ec2510cd22fec4082350416843477f9e9
+  specs:
+    cuprite (0.3.0)
+      capybara (>= 2.1, < 4)
+      cliver (~> 0.3)
+      websocket-driver (>= 0.6, < 0.8)
+
+GIT
   remote: https://github.com/oesmith/puffing-billy.git
   revision: 3c3c66a0871c3ee771f99d70d35e043762d1d68d
   specs:
@@ -97,6 +106,7 @@ PLATFORMS
 
 DEPENDENCIES
   apparition!
+  cuprite!
   poltergeist
   puffing-billy!
   rake

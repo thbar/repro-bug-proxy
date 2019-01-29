@@ -32,7 +32,8 @@ Capybara.app = RackApp
 RSpec.describe "Proxying of 3rd party requests", type: :feature do
   drivers = [
     :apparition_with_puffing_billy,
-    :poltergeist_with_puffing_billy
+    :poltergeist_with_puffing_billy,
+    :cuprite_with_puffing_billy
   ].each do |driver|
     it "works with #{driver}", driver: driver do
       visit '/'
